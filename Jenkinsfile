@@ -44,7 +44,7 @@ pipeline {
                 sshagent(['ccrimson1']) {
                     sh '''
                         echo 'Deploying'
-                        ssh ubuntu@54.221.112.142 "docker pull ccrimson1/cw2-server:0.1 && docker run -d ccrimson1/cw2-server:0.1"
+                        ssh ubuntu@3.85.202.246 "docker pull ccrimson1/cw2-server:0.1 && docker run -d ccrimson1/cw2-server:0.1"
                     '''
                 }
             }
