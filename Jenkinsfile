@@ -43,8 +43,8 @@ pipeline {
             steps {
                 sshagent(['ccrimson1']) {
                     sh '''
-                        # Add deployment commands here, for example:
-                        # ssh user@remote-server "docker pull ccrimson1/cw2-server:0.1 && docker run -d ccrimson1/cw2-server:0.1"
+                        echo 'Deploying'
+                        ssh ubuntu@ip-172-31-20-175 "docker pull ccrimson1/cw2-server:0.1 && docker run -d ccrimson1/cw2-server:0.1"
                     '''
                 }
             }
