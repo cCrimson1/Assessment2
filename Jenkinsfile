@@ -19,7 +19,6 @@ pipeline {
                 echo 'Testing Docker Image...'
                 sh '''
                     docker image inspect ccrimson1/cw2-server:0.1
-		    docker rm test-container
                     docker run --name test-container -p 8081:8080 -d ccrimson1/cw2-server:0.1
                     docker ps
                     docker stop test-container
