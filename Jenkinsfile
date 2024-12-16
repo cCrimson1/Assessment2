@@ -41,7 +41,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sshagent(['my-ssh-key']) {
+                sshagent(['ccrimson1']) {
                     sh '''
                         # Add deployment commands here, for example:
                         # ssh user@remote-server "docker pull ccrimson1/cw2-server:0.1 && docker run -d ccrimson1/cw2-server:0.1"
