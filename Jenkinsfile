@@ -9,7 +9,7 @@ pipeline {
 	stage('Docker Image Build') {
 		steps {
 			echo 'Building Docker Image...'
-			sh ' docker build --tag ccrimson1/cw2-server:0.1 . '
+			sh ' docker build --tag ccrimson1/cw2-server:0.1 .'
 			echo 'Docker Image built successfully'
 		}
 	}
@@ -42,4 +42,12 @@ pipeline {
 
 	stage('Deploy') {
 		steps {
-			ssh(['jenkins-k8s-ssh-key'
+			sshagent(['my-ssh-key']} {
+			sh ` `
+			}
+		}
+	}
+
+   }
+
+}
